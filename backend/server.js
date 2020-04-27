@@ -6,18 +6,19 @@ let express = require('express'),
    createError = require('http-errors');
 
 let dbConfig = {
-   db: 'mongodb+srv://devUser:admin@cluster0-tjntb.mongodb.net/ssewadb'
+   url: 'mongodb+srv://devUser:admin@cluster0-tjntb.mongodb.net/ssewadb',
+   config: {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      retryWrites: true,
+      w: 'majority'
+   }
 }
 
 
 // Connecting with mongo db
 mongoose.Promise = global.Promise;
-mongoose.connect(dbConfig.db, {
-   useNewUrlParser: true,
-   useUnifiedTopology: true,
-   retryWrites: true,
-   w: 'majority'
-}).then((data) => {
+mongoose.connect(dbConfig.url, dbConfig.config).then((data) => {
       console.log('Mongo Database sucessfully connected')
    },
    error => {
