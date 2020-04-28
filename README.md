@@ -1,8 +1,6 @@
-# Build Your First Ionic App: Photo Gallery (Ionic Angular and Capacitor)
+# SS Initial Repo
 
-Get started with Ionic by building a photo gallery app that runs on iOS, Android, and the web - with just one codebase. This is the complete project referenced in the ["Your First App: Angular" guide](https://ionicframework.com/docs/angular/your-first-app). Follow along to create a complete CRUD (create-read-update-delete) experience.
 
-Powered by [Ionic Angular](https://ionicframework.com/docs/angular/overview) (web app) and [Capacitor](https://capacitor.ionicframework.com) (native app runtime).
 
 ## How It Works
 
@@ -22,14 +20,24 @@ After the user navigates to Tab 2 (Photos), they can tap/click on the camera but
 ## Project Structure
 * Tab2 (Photos) (`src/app/tab2/`): Photo Gallery UI and basic logic.
 * PhotoService (`src/app/services/photo.service.ts`): Logic encapsulating Capacitor APIs, including Camera, Filesystem, and Storage.
+* Backend Directory (`backend/`): Node + Express Backend with User routes exposed at `/api/user/`.
+* Data extracted from MongoDB Atlas instance using Mongoose.
 
 ## How to Run
 
 > Note: It's highly recommended to follow along with the [tutorial guide](https://ionicframework.com/docs/angular/your-first-app), which goes into more depth, but this is the fastest way to run the app. 
 
+For FrontEnd (`/`)
 0) Install Ionic if needed: `npm install -g @ionic/cli`.
 1) Clone this repository.
 2) In a terminal, change directory into the repo: `cd photo-gallery-capacitor-ng`.
 3) Install all packages: `npm install`.
 4) Run on the web: `ionic serve`.
 5) Run on iOS or Android: See [here](https://ionicframework.com/docs/building/running).
+
+For Backend (`/backend/`)
+0) Install all packages: `npm install`.
+1) Install Nodemon: `npm -i -g nodemon`
+6) Run server.js in backend : `nodemon server.js`
+
+You will need to whitelist your IP in MongoDB Atlas Instance. Contact author for creds
