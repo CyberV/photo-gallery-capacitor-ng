@@ -40,4 +40,11 @@ For Backend (`/backend/`)
 1) Install Nodemon: `npm -i -g nodemon`
 6) Run server.js in backend : `nodemon server.js`
 
-You will need to whitelist your IP in MongoDB Atlas Instance. Contact author for creds
+> Note: You will need to whitelist your IP in MongoDB Atlas Instance. Contact author for creds
+
+## Contribution Guidelines
+
+1) All commits to be pushed in contributor's feature branch (to be forked from `develop` branch).
+2) Branches to be merged to `develop` branch via PR's. No PR to be merged without Revier's approval.
+3) Commits to follow pattern: `[COMMIT_TYPE]: [TICKED_ID] Description`
+    *[COMMIT_TYPE] = SETUP / FIX / MERGE / IMPROV 
