@@ -1,5 +1,6 @@
 # SS Initial Repo
 
+Initial Repository for SSewa App. 
 
 
 ## How It Works
